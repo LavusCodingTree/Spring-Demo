@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="bike" class="com.js.demo.Bike"></bean>
+	<bean id="movie" class="com.js.demo.Movie"></bean>
+
+
+	<bean id="book" class="com.js.demo.Book">
+		<constructor-arg index="0" value="10"></constructor-arg>
+		<constructor-arg index="1" value="java"></constructor-arg>
+		<constructor-arg index="2" value="150"></constructor-arg>
+	</bean>
+
+	<bean id="bo" class="com.js.demo.Book">
+		<property name="id" value="20"></property>
+		<property name="name" value="SQL"></property>
+		<property name="noOfpages" value="100"></property>
+	</bean>
+
+	<bean id="car" class="com.js.demo.Car">
+		<property name="e" ref="engine"></property>
+	</bean>
+
+	<bean id="engine" class="com.js.demo.Engine"></bean>
+
+</beans>
